@@ -36,19 +36,19 @@ const CONFIG = {
 
   // plugin configuration (optional)
   googleAnalytics: {
-    enable: false,
+    enable: true, // Google Analytics 활성화
     config: {
       measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
     },
   },
   googleSearchConsole: {
-    enable: false,
+    enable: true, // Google Search Console 활성화
     config: {
       siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
     },
   },
   naverSearchAdvisor: {
-    enable: false,
+    enable: true, // 네이버 서치어드바이저 활성화
     config: {
       siteVerification: process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION || "",
     },
