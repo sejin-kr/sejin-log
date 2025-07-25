@@ -28,8 +28,13 @@ export function filterPosts({
       )
     })
     .sort((a, b) => {
-      const dateA = new Date(a.date.start_date).getTime()
-      const dateB = new Date(b.date.start_date).getTime()
+      // date 속성이 존재하는지 확인하는 안전장치 추가
+      const dateA = a.date?.start_date
+        ? new Date(a.date.start_date).getTime()
+        : 0
+      const dateB = b.date?.start_date
+        ? new Date(b.date.start_date).getTime()
+        : 0
       return order === "desc" ? dateB - dateA : dateA - dateB
     })
 }
