@@ -73,6 +73,11 @@ export const Global = () => {
           margin: 0;
           border-top: 1px solid ${theme.colors.gray6};
         }
+
+        // init tag style
+        .notion-gray .notion-inline-code {
+          color: ${theme.colors.gray11};
+        }
       `}
     />
   )
